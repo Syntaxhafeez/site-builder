@@ -1,12 +1,12 @@
-export const runtime = "nodejs";
-
 import OpenAI from "openai";
 
-const openai = new OpenAI({
+const OpenAIClient = OpenAI as unknown as typeof OpenAI;
+
+const openai = new OpenAIClient({
   baseURL: "https://openrouter.ai/api/v1",
-  apiKey: process.env.AI_API_KEY,
+  apiKey: process.env.AI_API_KEY!,
   defaultHeaders: {
-    "HTTP-Referer": "https://site-builder-fawn.vercel.app",
+    "HTTP-Referer": process.env.FRONTEND_URL || "https://site-builder-fawn.vercel.app",
     "X-Title": "AI Website Builder"
   }
 });
