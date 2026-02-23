@@ -1,16 +1,14 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "module": "nodenext",
-        "moduleResolution":"nodenext",
-        "outDir": "./dist",
-        "rootDir": "./",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "allowSyntheticDefaultImports": true,
-    },
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist"
+  },
     "include": [
         "./**/*.ts"
     ],
